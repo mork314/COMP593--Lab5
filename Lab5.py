@@ -33,15 +33,15 @@ def paste_body_maker(poke_dict):
     count = 0
     abilities = poke_dict["abilities"]
     print(abilities)
-    ability_list = []
+    ability_string = ''
     for ability in abilities:
         count +=1
         ability_name = ability['ability']['name']
         if count != len(abilities):
-            ability_list.append(f"- {ability_name}\n")
+            ability_string += f"- {ability_name}\n"
         else:
-            ability_list.append(f"- {ability_name}")
-    return ability_list
+            ability_string += f"- {ability_name}"
+    return ability_string
     #
     #for i in range(0, len(abilities)):
        # ability = poke_dict["abilities"][i]
